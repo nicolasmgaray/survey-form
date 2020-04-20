@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="container">
+        <div id="hero">
+          <h1 id="title">Thank You !</h1>
+          <p id="description">
+            Thank you for subscribing and showing interest in our newsletter. If
+            you really like what we do, do not hesitate to share and recommend us ⚡
+          </p>
+        </div>
+        <form id="survey-form">
+          <p id="instructions">
+           Please complete and submit the form with your data ! 💪
+          </p>
+          <label id="name-label" for="name">Full Name:</label>
+          <input
+            class="form-control"
+            name="name"
+            placeholder="Enter your name"
+            id="name"
+            type="text"
+            required
+          />
+          <label id="email-label" for="email">Email :</label>
+          <input
+            class="form-control"
+            name="email"
+            placeholder="Enter your email"
+            id="email"
+            type="email"
+            required
+          />
+          <label id="number-label" for="number">Age (optional) :</label>
+          <input
+            class="form-control"
+            name="age"
+            placeholder="Enter your age"
+            min="10"
+            max="150"
+            id="number"
+            type="number"
+          />
+          <label id="dropdown-label" for="dropdown"
+            >How did you hear about our newsletter:</label
+          >
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select one option</option>
+            <option value="friend">Friend</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="twitter">Twitter</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="form-group">
+            <label>How often do you want to receive the newsletter?</label>
+            <label>
+              <input
+                name="frecuency"
+                value="weekly"
+                type="radio"
+                class="input-radio"
+                checked
+              />Weekly</label
+            >
+            <label>
+              <input
+                name="frecuency"
+                value="monthly"
+                type="radio"
+                class="input-radio"
+              />Monthly</label
+            >
+          </div>
+          <div class="form-group">
+            <p>
+              What topics are you interested in?
+            </p>
+            <label
+              ><input
+                name="topics"
+                value="frontend"
+                type="checkbox"
+                class="input-checkbox"
+              />Frontend Development</label
+            >
+            <label
+              ><input
+                name="topics"
+                value="backend"
+                type="checkbox"
+                class="input-checkbox"
+              />Backend Development</label
+            >
+            <label
+              ><input
+                name="topics"
+                value="devops"
+                type="checkbox"
+                class="input-checkbox"
+              />Devops</label
+            >
+            <label
+              ><input
+                name="topics"
+                value="design"
+                type="checkbox"
+                class="input-checkbox"
+              />Design</label
+            >
+          </div>
+  
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+  
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit 📨
+            </button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo|Hind+Madurai|Montserrat+Alternates&display=swap");
+
+:root {
+  --color-white: #ededf5;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Heebo, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template: "hero form" auto / 40em 1fr;
+}
+
+#hero {
+  position: sticky;
+  max-height: 100vh;
+  top: 0px;
+  grid-area: hero;
+  justify-content: space-evenly;
+  padding: 3em;
+  flex-direction: column;
+  display: flex;
+  color: white;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 1),
+      rgba(136, 136, 206, 0.9)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 7rem;
+  overflow-wrap: break-word;
+  font-family: "Montserrat Alternates", Verdana, sans-serif;
+}
+
+#description {
+  font-size: 2rem;
+  font-family: "Hind Madurai", Verdana, sans-serif;
+}
+
+#instructions {
+  font-size: 2rem;
+  font-family: "Hind Madurai", Verdana, sans-serif;
+}
+
+#survey-form {
+  grid-area: form;
+  background: var(--color-white);
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+  font-size: 1.7rem;
+}
+
+.form-control {
+  display: block;
+  font-size: 0.8em;
+  width: 100%;
+  height: 2.375em;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 10em;
+  font-size: 0.8em;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  padding: 0.5em 1.5em;
+  background: var(--color-green);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2em;
+  width: 100%;
+}
+
+form > label {
+  padding: 0.5em 0.1em;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 10px;
+  }
+
+  #hero {
+    position: static;
+  }
+
+  #container {
+    grid-template:
+      "hero" 35em
+      "form" auto
+      / 100%;
+  }
+}
